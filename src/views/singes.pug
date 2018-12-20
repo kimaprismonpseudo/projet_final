@@ -1,0 +1,20 @@
+html
+	header
+		style
+			include style.css
+	body
+
+		p RECHERCHER UN SINGE ICI :
+		|
+		form(method='GET' action='/getSinge')
+			|
+			div.form-group
+				label(for='username') NOM DU SINGE:
+				input#username.form-control(type='string', name='username')
+			|
+			|
+			button.btn.btn-primary(type='submit') obtenir ce singe
+
+			a(class='button' href='addSinges') ajouter un singe
+			a(class='button' href='supprSinges') supprimer un singe
+			a(class='button' href='modifSinges') modifier un singe

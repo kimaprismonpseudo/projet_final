@@ -1,0 +1,13 @@
+html
+	header
+		style
+			include style.css
+	body
+		form(method='POST' action='/supprSinge/')
+			|
+			div.form-group
+				label(for='username') NOM DU SINGE:
+				input#username.form-control(type='string', name='username')
+			|
+			|
+			button.btn.btn-primary(type='submit') TUER ce singe

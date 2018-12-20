@@ -1,0 +1,24 @@
+html
+	header
+		style
+			include style.css
+
+	body
+
+		p nom = #{info.nom}
+		p numero = #{info.numero}
+		p place possible = #{info.taille}
+		p place restante = #{info.restant}
+		p detail = #{info.detail}
+		|
+		form(method='GET' action='/getSingeEnclos')
+			|
+			div.form-group
+				label(for='numero') N° DE L'ENCLOS:
+				input#numero.form-control(type='string', name='numero',value=info.numero,disabled)
+			|
+			|
+			button.btn.btn-primary(type='submit') Voir les singes de cette enclos
+		|
+		a(class='button' href='index') revenir au menu
+

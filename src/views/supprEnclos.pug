@@ -1,0 +1,13 @@
+html
+	header
+		style
+			include style.css
+	body
+		form(method='POST' action='/supprEnclos')
+			|
+			div.form-group
+				label(for='numero') N° DE L'ENCLOS:
+				input#numero.form-control(type='string', name='numero')
+			|
+			|
+			button.btn.btn-primary(type='submit') TUER ce singe

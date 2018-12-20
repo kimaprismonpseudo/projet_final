@@ -1,0 +1,29 @@
+html
+	header
+		style
+			include style.css
+	body
+		form(method='POST' action='/addSinge')
+			|
+			div.form-group
+				label(for='username') NOM DU SINGE:
+				input#username.form-control(type='string', name='username')
+			|
+			div.form-group
+				label(for='poids') POIDS:
+				input#poids.form-control(type='string', name='poids')
+			|
+			div.form-group
+				label(for='taille') TAILLE:
+				input#taille.form-control(type='string', name='taille')
+			|
+			div.form-group
+				label(for='enclos') N°ENCLOS:
+				input#enclos.form-control(type='string', name='enclos')
+			|
+			div.form-group
+				label(for='detail') AUTRE INFO:
+				input#detail.form-control(type='string', name='detail')
+			|
+			|
+			button.btn.btn-primary(type='submit') ajouter
