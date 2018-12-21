@@ -25,6 +25,13 @@ app.get('/singes', function(req,res) {
 	res.render('singes');
 })
 
+app.get('/getASinge', function (req, res) {
+  models.Singe.findAll()
+    .then((singes) =>{
+      res.json(singes)
+    })
+})
+
 app.get('/getSinge', function (req, res) {
   models.Singe.findOne({nom: req.body.username})
     .then((singes) =>{
@@ -86,6 +93,13 @@ app.get('/getEnclos', function (req, res) {
   .then((enclos)=>{
   		res.render('getEnclos', {info: enclos})
   	})
+})
+
+app.get('/getAEnclos', function (req, res) {
+  models.Enclos.findAll()
+    .then((enclos) =>{
+      res.json(enclos)
+    })
 })
 
 app.get('/getSingeEnclos', function (req, res) {
