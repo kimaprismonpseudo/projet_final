@@ -10,11 +10,17 @@ html
 			|
 			div.form-group
 				label(for='username') NOM DU SINGE:
-				input#username.form-control(type='string', name='username')
+				input#username.form-control(type='string', name='username', class='button')
 			|
 			|
-			button.btn.btn-primary(type='submit') obtenir ce singe
+			button.btn.btn-primary(type='submit', class='button') obtenir ce singe
 
-			a(class='button' href='addSinges') ajouter un singe
-			a(class='button' href='supprSinges') supprimer un singe
-			a(class='button' href='modifSinges') modifier un singe
+		form(method='GET' action='/getASinge')
+			|
+			|
+			button.btn.btn-primary(type='submit', class='button') obtenir tout les singes
+		|
+		|
+		a(class='button' href='addSinges') ajouter un singe
+		a(class='button' href='supprSinges') supprimer un singe
+		a(class='button' href='modifSinges') modifier un singe

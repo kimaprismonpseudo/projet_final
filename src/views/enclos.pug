@@ -10,11 +10,18 @@ html
 			|
 			div.form-group
 				label(for='numero') N° DE L'ENCLOS:
-				input#numero.form-control(type='string', name='numero')
+				input#numero.form-control(type='string', name='numero', class='button')
 			|
 			|
-			button.btn.btn-primary(type='submit') obtenir cette enclos
+			button.btn.btn-primary(type='submit', class='button') obtenir cette enclos
 
-			a(class='button' href='addEnclos') ajouter un enclos
-			a(class='button' href='supprEnclos') supprimer un enclos
-			a(class='button' href='modifEnclos') modifier un enclos
+		form(method='GET' action='/getASinge')
+			|
+			|
+			button.btn.btn-primary(type='submit', class='button') obtenir tout les enclos
+		|
+		|
+
+		a(class='button' href='addEnclos') ajouter un enclos
+		a(class='button' href='supprEnclos') supprimer un enclos
+		a(class='button' href='modifEnclos') modifier un enclos
