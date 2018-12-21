@@ -89,7 +89,10 @@ app.get('/getEnclos', function (req, res) {
 })
 
 app.get('/getSingeEnclos', function (req, res) {
-  models.Singe.findOne({enclos : req.body.numero}) //(findAll({where:{enclos : req.body.numero}}))
+  console.log(req.query)
+  models.Monkey.findAll({
+	where : req.query
+	}) //(findAll({where:{enclos : req.body.numero}}))
   .then((singes)=>{
   		res.json(singes)
   	})
